@@ -7,12 +7,10 @@ import { View, Text, Button } from 'react-native';
 export default function App() {
   const [contador, setContador] = useState(0);
 
-  // roda UMA vez, quando o componente aparece
   useEffect(() => {
     console.log('montou!');
   }, []);
 
-  // roda toda vez que "contador" muda
   useEffect(() => {
     console.log('contador mudou para:', contador);
   }, [contador]);
@@ -37,7 +35,6 @@ export default function App() {
 //       console.log('tick');
 //     }, 1000);
 
-//     // Limpeza: para o timer quando o componente some
 //     return () => clearInterval(id);
 //   }, []);
 
